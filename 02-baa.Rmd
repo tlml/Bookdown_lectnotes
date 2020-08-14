@@ -1,0 +1,33 @@
+\maketitle
+test section
+============
+
+Some text...
+
+Removing the label that doesn't do anything, and adding Rbookdown label
+\begin{equation}
+  \int_1^2 x^2\sin(x) dx
+  (\#eq:integral)
+\end{equation}
+
+This equation is Equation \@ref(eq:integral).
+
+If you are using pandoc-eqnos extension (needs to be installed, check at https://github.com/tomduck/pandoc-eqnos, and activated in _output.yml), the following will also work:
+
+$$
+  \int_1^2 x^2\sin(x) dx$$ {#eq:integraltoo}
+
+which will be referenced as Equation ({@eq:integraltoo}).
+
+Note: it's either or for the whole document, NOT mixed!
+
+![This will be the label and alt-text](480px-SDO_2012_Venus_Transit_-_Path_Sequence_-_Full_Sun.jpg){width=".7\linewidth"}
+
+More control for images can be done with knitr:
+
+```{r knitr-logo, out.width='32.8%', fig.show='hold', fig.cap='Two logos side by side', echo=FALSE}
+knitr::include_graphics(rep('480px-SDO_2012_Venus_Transit_-_Path_Sequence_-_Full_Sun.jpg', 2))
+```
+
+The caption/title and the alt-text are still the same though.. There is a way to get around it, TBD.
+

@@ -1,0 +1,27 @@
+bookdown::gitbook:
+  split_by: none
+  number_sections: TRUE
+#  pandoc_args: --top-level-division=chapter
+#  pandoc_args: ["--filter", "/home/timolai/.local/bin/pandoc-eqnos"]
+#		"-M", "eqnos-number-by-section=FALSE",
+#		"-M", "eqnos-warning-level=2"]
+  includes:
+    in_header: mathjax-number.html
+  css: [style.css, toc.css]
+  config:
+    toc:
+      before: |
+        <li><a href="./">MA1851 Maple notes</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+    download: ["pdf", "epub"]
+bookdown::pdf_book:
+  pandoc_args: ["--filter", "/home/timolai/.local/bin/pandoc-eqnos",
+		"-M", "eqnos-number-by-section=FALSE",
+		"-M", "eqnos-warning-level=2"]
+  includes:
+    in_header: preamble.tex
+  latex_engine: xelatex
+  citation_package: natbib
+  keep_tex: yes
+bookdown::epub_book: default

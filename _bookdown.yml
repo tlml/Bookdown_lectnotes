@@ -1,0 +1,19 @@
+book_filename: "book_file"
+language:
+  ui:
+    chapter_name: "Chapter "
+delete_merged_file: true
+
+---
+output:
+  bookdown::html_book:
+    includes:
+      in_header: style.css
+  bookdown::gitbook:
+    md_extensions: multiline_tables
+    includes:
+      in_header: style.css
+  bookdown::pdf_book:
+    includes:
+      in_header: preamble.tex
+---

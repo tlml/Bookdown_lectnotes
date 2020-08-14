@@ -1,0 +1,82 @@
+--- 
+title: "Introduction"
+author: "Timo Laitinen"
+date: "`r Sys.Date()`"
+lang: en-GB
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+# bibliography: [book.bib, packages.bib]
+# biblio-style: apalike
+link-citations: yes
+github-repo: tlml/bookdown-demo
+description: "This is an example for using bookdown for html lecture notes. The output format for this example is bookdown::gitbook."
+---
+
+```{r echo=FALSE}
+colorize = function(x, color){
+  if (knitr::is_latex_output()) {
+    sprintf("\\textcolor{%s}{%s}", color, x)
+  } else if (knitr::is_html_output()) {
+    sprintf("<span style='color: %s;'>%s</span>", color, x)
+  } else x
+}
+```
+
+```{r echo=FALSE}
+colorize_eq = function(x, color){
+  if (knitr::is_latex_output()) {
+    sprintf("\\color{%s}{%s}", color, x)
+  } else if (knitr::is_html_output()) {
+    sprintf("<span style='color: %s;'>%s</span>", color, x)
+  } else x
+}
+```
+
+
+```{r echo=FALSE}
+colorize_eq_red = function(x){
+  if (knitr::is_latex_output()) {
+    sprintf("\\color{BrickRed}{%s}", x)
+  } else if (knitr::is_html_output()) {
+    sprintf("<span style='color: #EB0000;'>%s</span>", x)
+  } else x
+}
+```
+
+
+```{r echo=FALSE}
+BlueEq = function(x){
+  if (knitr::is_latex_output()) {
+    sprintf("\\color{blue}{%s}", x)
+  } else if (knitr::is_html_output()) {
+    sprintf("<span class='blueeq'>%s</span>", x)
+  } else x
+}
+```
+
+```{r echo=FALSE}
+Answer = function(x){
+  HideAnswer = TRUE
+  if (HideAnswer == FALSE) {
+       if (knitr::is_latex_output()) {
+       	  sprintf("\\color{blue}{%s}", x)
+  	} else if (knitr::is_html_output()) {
+	    paste(
+	    sprintf("<div class='Maple-Answer'>\n"),
+	    "<p>**Answer**</p>\n<p>",
+	    paste(x, sep="</p>\n<p>", collapse="</p>\n<p>"), "</p>\n</div>\n")
+  	 }
+  }
+}
+```
+
+# Prerequisites
+
+R needs to be installed.
+
+Section 1 is a direct pandoc export from LaTeX to md (see Makefile), Section 2 is slightly tuned further.
+
+
+
+

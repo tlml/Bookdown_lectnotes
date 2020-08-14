@@ -1,0 +1,81 @@
+p.caption {
+  color: #737373;
+  margin-top: 10px;
+}
+p code {
+  white-space: inherit;
+}
+pre {
+  word-break: normal;
+  word-wrap: normal;
+}
+pre code {
+  white-space: inherit;
+}
+
+.book .book-summary ul.summary li a:hover,.book .book-summary ul.summary li.active>a {
+    color:#0073D1;
+}
+
+.book .book-body .page-wrapper .page-inner section.normal a {
+    color: #3878B7;
+    color:#0073D1;
+}
+
+
+code > span.co  {
+    color: #427885;
+}
+
+.MathJax_Preview {
+    color: #757575;
+}
+
+
+
+div.exercise {
+  padding: 1em 1em 1em 4em;
+  margin-bottom: 10px;
+  background: #fcfcfc 5px center/3em no-repeat;
+  border: 2px solid blue;
+  border-radius: 5px;
+}
+
+.mjx-label{
+  padding: 1em 1em 1em 4em;
+  margin-bottom: 10px;
+  background: #e5e5ff 5px center/3em no-repeat;
+}
+
+.Maple-Answer{
+  padding: 1em 1em 1em 4em;
+  margin-bottom: 10px;
+  background: #f5f5ff 5px center/3em no-repeat;
+  border-left: 6px solid red;
+}
+
+
+.blueeq {
+    font-weight: bold;
+    color: blue;
+}
+
+.eqnos {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    font-weight: bold;
+    color: blue;
+    text-align: center;
+}
+.eqnos br {
+    display: none;
+}
+.eqnos-number {
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    right: 0em;
+    top: 50%;
+    line-height: 0;
+}
