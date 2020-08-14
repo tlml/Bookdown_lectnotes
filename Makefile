@@ -1,5 +1,5 @@
 
-OBJ =  01-baa.Rmd 
+OBJ =  01-test.Rmd 
 
 DEPS = _output.yml _bookdown.yml Makefile style.css
 
