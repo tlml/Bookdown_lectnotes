@@ -21,12 +21,12 @@ which will be referenced as Equation ({@eq:integraltoo}).
 
 Note: it's either or for the whole document, NOT mixed!
 
-![This will be the label and alt-text](dl-logo-black.jpg){width=".7\linewidth"}
+![This will be the label and alt-text](480px-SDO_2012_Venus_Transit_-_Path_Sequence_-_Full_Sun.jpg){width=".7\linewidth"}
 
 More control for images can be done with knitr:
 
 ```{r knitr-logo, out.width='32.8%', fig.show='hold', fig.cap='Two logos side by side', echo=FALSE}
-knitr::include_graphics(rep('dl-logo-black.jpg', 2))
+knitr::include_graphics(rep('480px-SDO_2012_Venus_Transit_-_Path_Sequence_-_Full_Sun.jpg', 2))
 ```
 
 The caption/title and the alt-text are still the same though.. There is a way to get around it, TBD.
