@@ -5,7 +5,11 @@ You'll need to install R, and then in R install bookdown by giving a command
 
 install.packages('bookdown')
 
-Then, you'll need to run Make. No instructions for rstudio etc yet, sorry... You can find more information on that, and on Bookdown in general, from the following (the text is copied from https://github.com/rstudio/bookdown-demo
+Then, you'll need to run 
+
+make
+
+(no instructions for rstudio etc yet, sorry)... You can find more information on that, and on Bookdown in general, from the following (the text is copied from https://github.com/rstudio/bookdown-demo
 
 # From bookdown-demo:
 
